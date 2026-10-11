@@ -1,0 +1,19 @@
+@font-face{font-family:Cairo;font-weight:400;src:url(fonts/@fontsource/cairo/files/cairo-arabic-400-normal.woff2)}
+@font-face{font-family:Cairo;font-weight:600;src:url(fonts/@fontsource/cairo/files/cairo-arabic-600-normal.woff2)}
+@font-face{font-family:Cairo;font-weight:700;src:url(fonts/@fontsource/cairo/files/cairo-arabic-700-normal.woff2)}
+@font-face{font-family:Cairo;font-weight:800;src:url(fonts/@fontsource/cairo/files/cairo-arabic-800-normal.woff2)}
+@font-face{font-family:Cairo;font-weight:900;src:url(fonts/@fontsource/cairo/files/cairo-arabic-900-normal.woff2)}
+@font-face{font-family:CairoL;font-weight:400 900;src:url(fonts/@fontsource/cairo/files/cairo-latin-700-normal.woff2)}
+@font-face{font-family:Messiri;font-weight:700;src:url(fonts/@fontsource/el-messiri/files/el-messiri-arabic-700-normal.woff2)}
+:root{--navy:#0b1630;--navy2:#13244a;--gold:#d9b25f;--gold2:#f3d998;--ink:#eef2fa;--mute:#9fb0cf}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden;background:var(--navy)}
+body{font-family:Cairo,CairoL,sans-serif;color:var(--ink);direction:rtl}
+.stage{position:relative;width:1080px;height:1080px;overflow:hidden;
+ background:radial-gradient(900px 700px at 80% 0%,#1d3466 0%,transparent 60%),radial-gradient(700px 600px at 0% 100%,#2a2350 0%,transparent 60%),linear-gradient(160deg,#0d1a38,#08112a)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(217,178,95,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(217,178,95,.06) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(circle at 50% 40%,#000 0%,transparent 75%)}
+.gold{background:linear-gradient(180deg,var(--gold2),var(--gold) 60%,#b88d3a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand{display:flex;align-items:center;gap:16px}
+.brand .name{font-family:Messiri,Cairo;font-size:44px;font-weight:700;line-height:1}
+.glass{background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.url{font-family:CairoL,Cairo;font-weight:700;letter-spacing:1px;direction:ltr}

@@ -1,0 +1,130 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.sc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0}
+.el{will-change:transform,opacity}
+.glow{position:absolute;width:900px;height:900px;left:90px;top:90px;border-radius:50%;background:radial-gradient(circle,rgba(217,178,95,.22),transparent 60%)}
+.ring{position:absolute;left:50%;top:50%;border:2px solid rgba(217,178,95,.5);border-radius:50%;transform:translate(-50%,-50%)}
+.hd{font-size:76px;font-weight:900;line-height:1.3}
+.sb{font-size:36px;color:#c9d4ea;font-weight:600;margin-top:18px}
+.kick{font-size:28px;font-weight:800;color:var(--gold2);letter-spacing:.5px;padding:10px 26px;border:1px solid rgba(217,178,95,.5);border-radius:99px;background:rgba(217,178,95,.08);margin-bottom:34px}
+/* scene 2 */
+.row{display:flex;align-items:center;gap:50px;margin-top:60px}
+.doc{width:200px;height:250px;border-radius:18px;background:#f4f1e8;box-shadow:0 20px 50px rgba(0,0,0,.4);padding:28px 22px;text-align:right}
+.doc i{display:block;height:11px;border-radius:6px;background:#c9c3b2;margin-bottom:13px}.doc i.h{background:#8a7d5c;width:70%;height:15px;margin-bottom:20px}.doc i.s{width:55%}
+.ai{width:110px;height:110px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#f3d998 0%,#d9b25f 55%,#9c7530 100%);box-shadow:0 0 0 14px rgba(217,178,95,.12),0 0 80px rgba(217,178,95,.55);font-size:32px;font-weight:900;color:var(--navy);font-family:CairoL}
+.sum{width:300px;padding:26px;text-align:right}
+.sum .t{font-size:24px;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:10px}.sum .t b{width:13px;height:13px;border-radius:50%;background:#4ade80;box-shadow:0 0 12px #4ade80}
+.sum i{display:block;height:10px;border-radius:5px;background:rgba(243,217,152,.55);margin-bottom:13px;transform-origin:right}
+/* scene 3 */
+.cases{display:flex;flex-direction:column;gap:22px;margin-top:56px;width:760px}
+.case{display:flex;align-items:center;gap:22px;padding:22px 28px;text-align:right}
+.case .ic{width:64px;height:64px;border-radius:16px;display:grid;place-items:center;font-size:34px;background:rgba(217,178,95,.15)}
+.case .nm{font-size:30px;font-weight:800}.case .mt{font-size:22px;color:var(--mute)}
+.case .bd{margin-right:auto;font-size:20px;font-weight:700;padding:6px 16px;border-radius:10px;background:rgba(74,222,128,.15);color:#86efac}
+/* scene 4 */
+.shield{width:260px;height:300px;margin-bottom:46px;position:relative}
+/* scene 5 */
+.prices{display:flex;gap:30px;margin-top:50px}
+.pr{width:330px;padding:34px 20px}
+.pr .p{font-size:84px;font-weight:900;line-height:1.1}.pr .p small{font-size:34px}
+.pr .l{font-size:28px;color:#c9d4ea;font-weight:700}
+.pr.best{border-color:rgba(217,178,95,.7);background:linear-gradient(160deg,rgba(217,178,95,.2),rgba(217,178,95,.05))}
+.trial{margin-top:44px;font-size:40px;font-weight:900;color:var(--navy);padding:16px 44px;border-radius:20px;background:linear-gradient(160deg,var(--gold2),var(--gold) 60%,#b88d3a);box-shadow:0 14px 40px rgba(217,178,95,.4)}
+.urlb{margin-top:34px;font-size:46px;color:var(--gold2)}
+.bar{position:absolute;bottom:0;right:0;height:6px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.wm{position:absolute;top:50px;right:60px;display:flex;align-items:center;gap:12px;opacity:0}
+.wm .name{font-size:32px}
+</style></head><body><div class="stage" id="st"><div class="grid" id="grid"></div><div class="glow" id="glow"></div>
+<div class="ring" id="r1" style="width:420px;height:420px"></div><div class="ring" id="r2" style="width:620px;height:620px"></div>
+<div class="wm" id="wm"><img src="logo.svg" width="54"><span class="name gold brand" style="font-family:Messiri">ميزان برو</span></div>
+
+<div class="sc" id="s1">
+ <img src="logo.svg" width="230" class="el" id="s1logo">
+ <div class="el" id="s1name" style="font-family:Messiri;font-size:120px;font-weight:700;margin-top:26px;line-height:1.2"><span class="gold">ميزان برو</span></div>
+ <div class="sb el" id="s1tag">مكتبك كله في نظام واحد</div>
+</div>
+
+<div class="sc" id="s2">
+ <div class="kick el" id="s2k">الذكاء الاصطناعي في خدمتك</div>
+ <div class="hd el" id="s2h">تلخيص ذكي<br><span class="gold">لأوراق القضايا</span></div>
+ <div class="row">
+  <div class="doc el" id="s2d"><i class="h"></i><i></i><i></i><i class="s"></i><i></i><i></i><i class="s"></i></div>
+  <div class="ai el" id="s2ai">AI</div>
+  <div class="sum glass el" id="s2s"><div class="t"><b></b>الملخص</div><i id="l1" style="width:100%"></i><i id="l2" style="width:80%"></i><i id="l3" style="width:92%"></i><i id="l4" style="width:60%"></i></div>
+ </div>
+</div>
+
+<div class="sc" id="s3">
+ <div class="hd el" id="s3h">كل قضية <span class="gold">بمستنداتها</span><br>في مكان واحد</div>
+ <div class="cases">
+  <div class="case glass el" id="c1"><div class="ic">⚖️</div><div><div class="nm">دعوى تعويض</div><div class="mt">12 مستند · 3 ملخصات</div></div><span class="bd">محدّثة</span></div>
+  <div class="case glass el" id="c2"><div class="ic">📁</div><div><div class="nm">نزاع إيجار</div><div class="mt">8 مستندات · 2 ملخص</div></div><span class="bd">محدّثة</span></div>
+  <div class="case glass el" id="c3"><div class="ic">📄</div><div><div class="nm">صحة توقيع</div><div class="mt">5 مستندات · ملخص واحد</div></div><span class="bd">محدّثة</span></div>
+ </div>
+</div>
+
+<div class="sc" id="s4">
+ <svg class="shield el" id="sh" viewBox="0 0 260 300"><defs><linearGradient id="gg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d998"/><stop offset="1" stop-color="#b88d3a"/></linearGradient></defs>
+  <path d="M130 10 L240 50 V140 C240 215 190 265 130 290 C70 265 20 215 20 140 V50 Z" fill="rgba(217,178,95,.12)" stroke="url(#gg)" stroke-width="7"/>
+  <rect x="88" y="138" width="84" height="70" rx="12" fill="url(#gg)"/>
+  <path id="shk" d="M102 138 V115 a28 28 0 0 1 56 0 V138" fill="none" stroke="url(#gg)" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="130" cy="168" r="9" fill="#0b1630"/><rect x="126" y="170" width="8" height="20" rx="3" fill="#0b1630"/></svg>
+ <div class="hd el" id="s4h">بياناتك وبيانات موكليك<br><span class="gold">في أمان</span></div>
+</div>
+
+<div class="sc" id="s5">
+ <img src="logo.svg" width="120" class="el" id="s5logo">
+ <div class="prices">
+  <div class="pr glass el" id="p1"><div class="l">اشتراك شهري</div><div class="p gold">200<small> ج</small></div></div>
+  <div class="pr glass best el" id="p2"><div class="l">اشتراك سنوي</div><div class="p gold">2000<small> ج</small></div></div>
+ </div>
+ <div class="trial el" id="tr">جرّب مجانًا 14 يوم</div>
+ <div class="urlb url el" id="u">mezan.pro</div>
+</div>
+<div class="bar" id="bar"></div>
+</div>
+<script>
+const D=16;
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const eo=x=>1-Math.pow(1-x,3), eb=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const p=(t,a,d)=>cl((t-a)/d);
+function set(id,o,ty=0,s=1,x=0,extra=''){const e=$(id);e.style.opacity=o;e.style.transform=`translate(${x}px,${ty}px) scale(${s}) ${extra}`}
+function inOut(t,a,b,f=.45){return Math.min(eo(p(t,a,f)),1-eo(p(t,b-f,f)))}
+function rise(id,t,a,d=.6,dist=50){const k=eo(p(t,a,d));set(id,k,(1-k)*dist)}
+function seek(t){
+ // background
+ $('grid').style.transform=`translateY(${(t*8)%60}px)`;
+ $('glow').style.transform=`scale(${1+.08*Math.sin(t*1.3)})`;
+ const rv=inOut(t,0,3.2,.8);
+ for(const[i,id]of[[0,'r1'],[1,'r2']]){const k=eo(p(t,.1+i*.15,1.2));$(id).style.opacity=rv*(.6-i*.25);$(id).style.transform=`translate(-50%,-50%) scale(${.5+.6*k+.03*Math.sin(t*2+i)})`}
+ $('wm').style.opacity=t>3&&t<13?Math.min(eo(p(t,3,.5)),1-eo(p(t,12.6,.4))):0;
+ $('bar').style.width=(t/D*100)+'%';
+ // scenes
+ const S=[['s1',0,3.2],['s2',3.0,6.8],['s3',6.6,10.2],['s4',10.0,13.0],['s5',12.8,16.2]];
+ for(const[id,a,b]of S){$(id).style.opacity=inOut(t,a,b,.4)}
+ // s1
+ {const k=eb(p(t,.15,.8));set('s1logo',cl(k*1.2),0,.4+.6*k,0,`rotate(${(1-k)*-25}deg)`);rise('s1name',t,.7,.7,60);rise('s1tag',t,1.2,.7,40);}
+ // s2
+ rise('s2k',t,3.3,.5,30);rise('s2h',t,3.5,.6,50);
+ {const k=eo(p(t,4.1,.6));set('s2d',k,0,1,(1-k)*-120);}
+ {const k=eb(p(t,4.5,.6));set('s2ai',cl(k),0,.3+.7*k+.05*Math.sin(t*6)*k);}
+ {const k=eo(p(t,4.9,.6));set('s2s',k,0,1,(1-k)*120);
+  ['l1','l2','l3','l4'].forEach((id,i)=>{$(id).style.transform=`scaleX(${eo(p(t,5.2+i*.22,.4))})`});}
+ // s3
+ rise('s3h',t,6.9,.6,50);
+ ['c1','c2','c3'].forEach((id,i)=>{const k=eo(p(t,7.5+i*.35,.6));set(id,k,0,1,(1-k)*-160)});
+ // s4
+ {const k=eb(p(t,10.2,.8));set('sh',cl(k),0,.5+.5*k);
+  const lk=eo(p(t,11.1,.35));$('shk').setAttribute('transform',`translate(0 ${-14*(1-lk)})`);}
+ rise('s4h',t,10.6,.6,50);
+ // s5
+ {const k=eb(p(t,13.0,.6));set('s5logo',cl(k),0,.5+.5*k);}
+ ['p1','p2'].forEach((id,i)=>{const k=eb(p(t,13.3+i*.2,.6));set(id,cl(k),(1-k)*60,.9+.1*k)});
+ {const k=eb(p(t,13.9,.6));set('tr',cl(k),0,(.7+.3*k)*(1+.025*Math.sin(t*5)*cl(k)));}
+ rise('u',t,14.3,.5,30);
+ // end fade
+ $('st').style.filter=`brightness(${1-.85*eo(p(t,15.6,.4))})`;
+}
+window.seek=seek;seek(0);
+</script></body></html>
