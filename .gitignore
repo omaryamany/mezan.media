@@ -1,2 +1,5 @@
+brand/wk/*.html
+brand/wk/*.json
+brand/wk/*.txt
 brand/wk/out/
 __pycache__/
