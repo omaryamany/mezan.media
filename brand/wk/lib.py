@@ -36,3 +36,9 @@ def video(name,scenes,css='',D=16,story=False,wm=True):
     css=base+'.ring{position:absolute;left:50%;top:50%;border:2px dashed rgba(217,178,95,.28);border-radius:50%;opacity:.5}'+css
     html=HEAD.format(cls=cls,css=css)+f'<body data-d="{D}"><div class="stage" id="st"><div class="grid" id="grid"></div>{glow}{rings}{wmh}{scenes}{bar}</div><script src="../engine.js"></script></body></html>'
     return write(name,html)
+
+def sflow(name,inner,gap=50,css='',url=True):
+    # story with flowing centered column inside safe zone (330..1500), url at 1580
+    u='<div class="url center" style="position:absolute;top:1570px;left:0;right:0;font-size:62px;color:var(--gold2)">mezan.pro</div>' if url else ''
+    body=f'<div style="position:absolute;top:340px;height:1180px;left:80px;right:80px;display:flex;flex-direction:column;justify-content:center;gap:{gap}px;text-align:center">{inner}</div>{u}'
+    return story(name,body,css=css)
