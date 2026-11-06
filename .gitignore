@@ -3,3 +3,4 @@ brand/wk/*.json
 brand/wk/*.txt
 brand/wk/out/
 __pycache__/
+brand/wk/*.log
